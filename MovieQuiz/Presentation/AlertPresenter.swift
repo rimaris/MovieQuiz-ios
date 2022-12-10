@@ -12,8 +12,8 @@ import UIKit
 class AlertPresenter {
     weak public var viewController: UIViewController?
     
-    public func showAlert(model: AlertModel) {
-        guard let viewController = viewController else {return}
+    func showAlert(model: AlertModel) {
+        guard let viewController = viewController else { return }
         
         let alert = UIAlertController(title: model.title, message: model.text, preferredStyle: .alert)
         let action = UIAlertAction(title: model.buttonText, style: .default) { _ in

@@ -71,7 +71,6 @@ final class StatisticServiceImplementation: StatisticService {
         
     }
     
-    
     private var correct: Int {
         get {
             return userDefaults.integer(forKey: Keys.correct.rawValue)
@@ -89,8 +88,6 @@ final class StatisticServiceImplementation: StatisticService {
             return userDefaults.set(newValue, forKey: Keys.total.rawValue)
         }
     }
-    
-    
 }
 
 
