@@ -55,7 +55,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             let formattedDate = statisticService.bestGame.date.dateTimeString
                 
             let text = """
-            Ваш результат: \(correctAnswers) / \(questionsAmount)
+            Ваш результат: \(correctAnswers)/\(questionsAmount)
             Количество сыгранных квизов: \(statisticService.gamesCount)
             Рекорд: \(statisticService.bestGame.correct)/\(statisticService.bestGame.total) (\(formattedDate))
             Средняя точность: \(accuracyStr)%
