@@ -120,16 +120,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lDC-Hg-g66">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="black"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fMl-uu-hb5" secondAttribute="trailing" constant="20" id="8bP-vA-Zik"/>
+                            <constraint firstItem="lDC-Hg-g66" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FRF-eq-CqI"/>
                             <constraint firstItem="fMl-uu-hb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hrK-3B-Ino"/>
+                            <constraint firstItem="lDC-Hg-g66" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jsr-pu-J5a"/>
                             <constraint firstItem="fMl-uu-hb5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="sl6-MS-Yku"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="lDC-Hg-g66" id="4Og-3S-Iz8"/>
                         <outlet property="counterLabel" destination="ORB-gj-Fxg" id="JfD-wl-R3s"/>
                         <outlet property="imageView" destination="9uY-8N-BQh" id="GRN-It-oeC"/>
                         <outlet property="noButton" destination="v7T-lR-7Wi" id="azo-dq-ENI"/>
