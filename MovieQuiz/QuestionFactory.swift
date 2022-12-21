@@ -27,7 +27,7 @@ class QuestionFactory: QuestionFactoryProtocol {
                 guard let self = self else { return }
                 switch result {
                 case .success(let mostPopularMovies):
-                    if mostPopularMovies.errorMessage != "" {
+                    if !mostPopularMovies.errorMessage.isEmpty {
                         self.delegate?.didFailToLoadData(with: ServerError.failLoad(message: mostPopularMovies.errorMessage))
                     }
                     self.movies = mostPopularMovies.items
