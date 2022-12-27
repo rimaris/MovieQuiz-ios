@@ -12,9 +12,8 @@ class QuestionFactory: QuestionFactoryProtocol {
     weak var delegate: QuestionFactoryDelegate?
     private var movies: [MostPopularMovie] = []
     
-    init(moviesLoader: MoviesLoading, delegate: QuestionFactoryDelegate) {
+    init(moviesLoader: MoviesLoading) {
         self.moviesLoader = moviesLoader
-        self.delegate = delegate
     }
     
     enum ServerError: Error {

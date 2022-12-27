@@ -11,7 +11,7 @@ import XCTest
 
 class ArrayTests: XCTestCase {
     
-    func testGetValueInRange() throws { // тест на успешное взятие элемента по индексу
+    func testGetValueInRange() throws {
         // Given
         
         let arrayOfInt = [1, 2, 3, 4, 5]
@@ -26,7 +26,7 @@ class ArrayTests: XCTestCase {
         
     }
         
-    func testGetValueOutOfRange() throws { // тест на взятие элемента по неправильному индексу
+    func testGetValueOutOfRange() throws { 
         // Given
         let arrayOfInt = [1, 2, 3, 4, 5]
         
