@@ -8,10 +8,8 @@
 import XCTest
 
 final class MovieQuizUITests: XCTestCase {
-    
     // swiftlint:disable:next implicitly_unwrapped_optional
     var app: XCUIApplication!
-
     override func setUpWithError() throws {
         try super.setUpWithError()
         
@@ -19,7 +17,6 @@ final class MovieQuizUITests: XCTestCase {
         app.launch()
         
         continueAfterFailure = false
-
     }
 
     override func tearDownWithError() throws {
@@ -29,29 +26,20 @@ final class MovieQuizUITests: XCTestCase {
         app = nil
     }
     
+    func testYesButton() {
+        let firstPoster = app.images["Poster"]
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+        app.buttons["Yes"].tap()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let secondPoster = app.images["Poster"]
+        let indexLabel = app.staticTexts["Index"]
+
+        sleep(5)
+
+        XCTAssertTrue(indexLabel.label == "2/10")
+        XCTAssertFalse(firstPoster == secondPoster)
+
     }
-    
-//    func testYesButton() {
-//        let firstPoster = app.images["Poster"]
-//
-//        app.buttons["Yes"].tap()
-//
-//        let secondPoster = app.images["Poster"]
-//        let indexLabel = app.staticTexts["Index"]
-//
-//        sleep(5)
-//
-//        XCTAssertTrue(indexLabel.label == "2/10")
-//        XCTAssertFalse(firstPoster == secondPoster)
-//
-//    }
     
     func testNoButton() {
         let firstPoster = app.images["Poster"]
@@ -98,7 +86,5 @@ final class MovieQuizUITests: XCTestCase {
         
         XCTAssertFalse(app.alerts["Game results"].exists)
         XCTAssertTrue(indexLabel.label == "1/10")
-        
     }
-
 }
