@@ -60,7 +60,6 @@ struct StubNetworkClient: NetworkRouting {
     }
 }
 
-
 class MoviesLoaderTests: XCTestCase {
     func testSuccessLoading() throws {
         // Given
@@ -79,7 +78,6 @@ class MoviesLoaderTests: XCTestCase {
                 XCTFail("Unexpected failure") 
             }
         }
-           
         waitForExpectations(timeout: 1)
     }
     
@@ -100,7 +98,6 @@ class MoviesLoaderTests: XCTestCase {
                 expectation.fulfill()
             }
         }
-           
         waitForExpectations(timeout: 1)
     }
 }
